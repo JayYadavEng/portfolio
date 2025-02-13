@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSI - Jay Yadav's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #ddd;
+            padding: 10px;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+        }
+        nav a:hover {
+            background: #ccc;
+        }
+        .home-icon {
+            width: 24px;
+            height: 24px;
+            fill: black;
+        }
+        .home-link:hover .home-icon {
+            fill: #008CBA;
+        }
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+        .dropdown-button {
+            color: black;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            text-align: left;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-button:hover {
+            background-color: #ccc;
+        }
+        .hero {
+            background: #008CBA;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 75px;
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .box-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        .box-card {
+            background: #eef6fc;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: black;
+        }
+        .box-card img {
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .box-card h3 {
+            margin: 15px 0 10px;
+            color: black;
+        }
+        .box-card p {
+            margin: 15px 0 10px;
+            color: black;
+            font-size: 1em;
+            text-align: left;
+        }
+        .box-card a {
+            text-decoration: none;
+        }
+        .box-card a:hover {
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f0f0f0;
+            color: black;
+            margin-top: 20px;
+        }
+        .footer-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .footer-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .footer-button svg {
+            width: 40px;
+            height: 40px;
+            fill: black;
+        }
+        .footer-button:hover svg {
+        fill: #008CBA;
+        }
+        .footer-button:hover .email-path {
+        stroke: #008CBA;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="..\index.html" class="home-link">
+        <svg class="home-icon" viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+    </a>
+    <a href="..\about.html">About Me</a>
+    <a href="..\resume.html">Resume</a>
+    <div class="dropdown">
+        <a href="..\projects.html" class="dropdown-button">Projects<i style="font-size:12px">&nbsp;&#9660;</i> </a>
+        <div class="dropdown-content">
+            <a href="dbf.html">Design/Build/Fly</a>
+            <a href="csi.html">Columbia Space Initiative</a>
+            <a href="academic.html">Academic Work</a>
+            <a href="personal.html">Personal Projects</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Columbia Space Initiative</h1>
+</section>
+
+<section class="box-container">
+    <div class="box-card">
+        <h3>Background</h3>
+        <img src="csi.jpg" alt="Background" width="600px">
+        <p>The Rocketry team within the Columbia Space Initiative focuses on design/build competitions against other schools. In the past two years, we have participated in the <a href="https://www.spaceportamericacup.com/">Spaceport America Cup</a>
+            and <a href="https://www.faroutlaunch.org/">FAR-OUT</a> missions. I have been on the airframe subteam, which focuses on the exterior structure of the rocket and overall weight and balance.
+        </p>
+    </div>
+
+    <div class="box-card">
+        <h3>Design Process</h3>
+        <img src="csi_cfd.jpg" alt="Design Process" width="700px">
+        <p>On the airframe team, we start with a general idea of the rocket requirements, and use tools like OpenRocket to finalize the layout. We find the appropriate nose and fin structure through FEA in Ansys Mechanical and 
+            CFD in Ansys Fluent. We then construct the components from carbon fiber, performing layups and CNC waterjet machining to get the finished product.
+        </p>
+    </div>
+
+    <div class="box-card">
+        <h3>Competition</h3>
+        <img src="csi_competition.jpg" alt="Competition" width="400px">
+        <p>Over the past two years, we've had our first two successful launches. While in 2023 our landing was less than controlled, we made significant improvements and had our first successful recovery last year the FAR-OUT competition.
+        </p>
+    </div>
+
+</section>
+
+<footer>
+    <div class="footer-buttons">
+        <a href="mailto:jay.yadav@columbia.edu" class="footer-button">
+            <svg viewBox="0 0 24 24" class="footer-svg">
+                <path class="email-path" d="M2 5c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V5z" fill="none" stroke="black" stroke-width="2"/>
+                <path class="email-path" d="M2 5l10 7 10-7" fill="none" stroke="black" stroke-width="2"/>
+            </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/jay-yadav1/" class="footer-button" target="_blank">
+            <svg viewBox="0 0 24 24">
+                <path d="M20.451 20.451h-3.551v-5.569c0-1.327-.025-3.034-1.849-3.034-1.851 0-2.136 1.446-2.136 2.939v5.664h-3.548V9h3.408v1.561h.049c.477-.9 1.641-1.849 3.375-1.849 3.605 0 4.272 2.373 4.272 5.457v6.282zM5.337 7.433a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.775 13.018H3.56V9h3.552zM22.222 0H1.778C.796 0 0 .774 0 1.723v20.555C0 23.226.796 24 1.778 24h20.445c.982 0 1.778-.774 1.778-1.722V1.722C24 .774 23.204 0 22.222 0z"/>
+            </svg>
+        </a>
+    </div>
+    <p>&copy; 2025 Jay Yadav. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
