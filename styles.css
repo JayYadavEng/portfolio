@@ -181,6 +181,9 @@ stroke: #008CBA;
     .box-card p {
         font-size: 0.7em;
     }
+    .desc p {
+        font-size: 0.8em;
+    }
 }
 /* Resume */
 .resume-container {
@@ -203,8 +206,8 @@ stroke: #008CBA;
         align-items: center;
     }
     .resume-container object {
-        width: 90vw;
-        height: 80vh;
+        width: 95vw;
+        /*height: 80vh;*/
     }
 }
 /* Homepage */
