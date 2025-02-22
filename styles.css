@@ -193,6 +193,9 @@ stroke: #008CBA;
     .box-card p {
         font-size: 0.7em;
     }
+    .tooltip {
+        font-size: 0.7em;
+    }
     .desc p {
         font-size: 0.8em;
     }
